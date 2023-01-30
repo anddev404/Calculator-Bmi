@@ -2,6 +2,7 @@ package com.anddev404.calculatorbmi.tools
 
 import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
+import kotlin.math.roundToInt
 
 class UnitConverter {
 
@@ -13,10 +14,10 @@ class UnitConverter {
             return when (unit) {
                 WeightUnit.KG -> "$kg kg"
                 WeightUnit.LB -> "${
-                    String.format("%.0f", kgToLb(kg))
+                    kgToLb(kg).roundToInt()
                 } lb"
                 WeightUnit.ST_LB -> "${kgToStone(kg)} st ${
-                    String.format("%.0f", kgToLb(restFromKgToStone(kg)))
+                    kgToLb(restFromKgToStone(kg)).roundToInt()
                 } lb"
             }
         }
@@ -40,10 +41,10 @@ class UnitConverter {
             return when (unit) {
                 HeightUnit.CM -> "$cm cm"
                 HeightUnit.IN -> "${
-                    String.format("%.0f", cmToInches(cm))
+                    cmToInches(cm).roundToInt()
                 } in"
                 HeightUnit.FT_IN -> "${cmToFeet(cm)} ft ${
-                    String.format("%.0f", cmToInches(restFromCmToFeet(cm)))
+                    cmToInches(restFromCmToFeet(cm)).roundToInt()
                 } in"
             }
         }
