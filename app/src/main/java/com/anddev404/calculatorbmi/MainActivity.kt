@@ -13,5 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         viewmodel = ViewModelProvider(this)[SharedViewModel::class.java]
 
+        hideActionBar()
+
+    }
+
+    private fun hideActionBar() {
+        supportActionBar?.hide()
     }
 }
