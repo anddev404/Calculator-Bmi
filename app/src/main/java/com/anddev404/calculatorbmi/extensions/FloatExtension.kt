@@ -4,6 +4,10 @@ class FloatExtension {
 
     companion object {
 
+        fun Float.roundToInt(): Int {
+            return String.format("%.0f", this).toInt()
+        }
+
         fun Float.roundToOneDecimal(): Float {
             return String.format("%.1f", this).replace(",", ".").toFloat()
         }
