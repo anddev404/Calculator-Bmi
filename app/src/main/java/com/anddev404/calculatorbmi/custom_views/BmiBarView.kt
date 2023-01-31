@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.SeekBar
 import android.widget.TextView
 import com.anddev404.calculatorbmi.R
+import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToTwoDecimal
 
 class BmiBarView(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
@@ -82,7 +83,7 @@ class BmiBarView(context: Context?, attrs: AttributeSet?) : LinearLayout(context
             text.text = "BMI ..."
 
         } else {
-            text.text = "BMI $bmi"
+            text.text = "BMI ${bmi.roundToTwoDecimal()}"
         }
     }
 }
