@@ -11,6 +11,11 @@ class SharedViewModel : ViewModel() {
 
     private val _weight: MutableLiveData<Float> = MutableLiveData()
     val weight: LiveData<Float> = _weight
+
+    init {
+
+    }
+
     //region methods
     fun changeHeight(height: Float) {
         if (_height.value != height) {
