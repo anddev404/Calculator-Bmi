@@ -35,13 +35,13 @@ class SharedViewModel : ViewModel() {
     //region methods
     fun changeHeight(height: Float) {
         if (_height.value != height) {
-            _height.value = height
+            _height.postValue(height)
         }
     }
 
     fun changeWeight(weight: Float) {
         if (_weight.value != weight) {
-            _weight.value = weight
+            _weight.postValue(weight)
         }
     }
     //endregion
