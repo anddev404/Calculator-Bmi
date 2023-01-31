@@ -19,12 +19,12 @@ class BmiBarView(context: Context?, attrs: AttributeSet?) : LinearLayout(context
         seekBar = findViewById(R.id.bmi_seek_bar)
         text = findViewById(R.id.bmi_text)
 
-        val typedArray = context?.obtainStyledAttributes(attrs, R.styleable.BmiResultView)
+        val typedArray = context?.obtainStyledAttributes(attrs, R.styleable.BmiBarView)
 
         typedArray?.let {
             try {
 
-                val bmi = typedArray.getFloat(R.styleable.BmiResultView_bmi, 0f)
+                val bmi = typedArray.getFloat(R.styleable.BmiBarView_bmi, 0f)
                 setBmi(bmi)
 
             } finally {
