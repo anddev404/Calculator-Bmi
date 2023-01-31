@@ -27,7 +27,7 @@ class BmiTableView(context: Context?, attrs: AttributeSet?) : LinearLayout(conte
 
                 val highlightedView = typedArray.getFloat(R.styleable.BmiTableView_highlight, 0f)
 
-                highlightView(highlightedView)
+                setHighlight(highlightedView)
 
             } finally {
                 typedArray.recycle()
@@ -35,7 +35,7 @@ class BmiTableView(context: Context?, attrs: AttributeSet?) : LinearLayout(conte
         }
     }
 
-    fun highlightView(bmi: Float) {
+    fun setHighlight(bmi: Float) {
         clearAllBackgroundColors()
 
         when (bmiToHighlight(bmi)) {
