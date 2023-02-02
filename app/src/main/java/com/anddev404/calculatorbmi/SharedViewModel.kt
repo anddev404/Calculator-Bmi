@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.anddev404.calculatorbmi.tools.CalculatorTools
 
 class SharedViewModel : ViewModel() {
@@ -13,6 +14,8 @@ class SharedViewModel : ViewModel() {
 
     private val _weight: MutableLiveData<Float> = MutableLiveData(80f)//TODO delete temporary value
     val weight: LiveData<Float> = _weight
+
+    private val _weightUnit: MutableLiveData<WeightUnit> = MutableLiveData(WeightUnit.KG)
 
     val bmi = MediatorLiveData<Float>()
 
@@ -43,6 +46,10 @@ class SharedViewModel : ViewModel() {
         if (_weight.value != weight) {
             _weight.postValue(weight)
         }
+    }
+
+    fun changeWeightUnit(unit: WeightUnit) {
+        _weightUnit.value = unit
     }
     //endregion
 
