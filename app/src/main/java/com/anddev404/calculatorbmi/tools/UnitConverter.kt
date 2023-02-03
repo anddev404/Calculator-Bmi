@@ -2,7 +2,8 @@ package com.anddev404.calculatorbmi.tools
 
 import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
-import kotlin.math.roundToInt
+import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToInt
+import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToOneDecimal
 
 class UnitConverter {
 
@@ -12,7 +13,7 @@ class UnitConverter {
         fun convertWeight(kg: Float, unit: WeightUnit): String {
 
             return when (unit) {
-                WeightUnit.KG -> "$kg kg"
+                WeightUnit.KG -> "${kg.roundToOneDecimal()} kg"
                 WeightUnit.LB -> "${
                     kgToLb(kg).roundToInt()
                 } lb"
@@ -39,7 +40,7 @@ class UnitConverter {
         fun convertHeight(cm: Float, unit: HeightUnit): String {
 
             return when (unit) {
-                HeightUnit.CM -> "$cm cm"
+                HeightUnit.CM -> "${cm.roundToOneDecimal()} cm"
                 HeightUnit.IN -> "${
                     cmToInches(cm).roundToInt()
                 } in"
