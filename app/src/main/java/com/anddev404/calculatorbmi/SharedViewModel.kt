@@ -19,6 +19,7 @@ class SharedViewModel : ViewModel() {
     private val _weightUnit: MutableLiveData<WeightUnit> = MutableLiveData(WeightUnit.KG)
 
     val idealWeight = MediatorLiveData<String>()
+    val correctWeight = MediatorLiveData<String>()
 
     val bmi = MediatorLiveData<Float>()
 
@@ -55,6 +56,36 @@ class SharedViewModel : ViewModel() {
             addSource(_height) { height ->
                 _weightUnit.value?.let { weightUnit ->
                     value = getIdealWeight(height, weightUnit)
+                }
+            }
+        }
+
+        correctWeight.apply {
+
+            fun getCorrectWeight(height: Float, weightUnit: WeightUnit): String {
+                return if (height > 0) "${
+                    UnitConverter.convertWeight(
+                        CalculatorTools.calculateMinWeight(height),
+                        weightUnit
+                    )
+                } -...\n...- ${
+                    UnitConverter.convertWeight(
+                        CalculatorTools.calculateMaxWeight(height),
+                        weightUnit
+                    )
+                }"
+                else "..."
+            }
+
+            addSource(_weightUnit) { weightUnit ->
+                _height.value?.let { height ->
+                    value = getCorrectWeight(height, weightUnit)
+                }
+            }
+
+            addSource(_height) { height ->
+                _weightUnit.value?.let { weightUnit ->
+                    value = getCorrectWeight(height, weightUnit)
                 }
             }
         }
