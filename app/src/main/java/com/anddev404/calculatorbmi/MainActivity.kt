@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView<ActivityMainBinding?>(this, R.layout.activity_main)
             .apply {
                 viewmodel = this@MainActivity.viewmodel
-                this.supportFragmentManager = this@MainActivity.supportFragmentManager
+                supportFragmentManager = this@MainActivity.supportFragmentManager
                 lifecycleOwner = this@MainActivity
             }
 
