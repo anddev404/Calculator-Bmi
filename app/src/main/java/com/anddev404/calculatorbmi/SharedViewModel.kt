@@ -18,6 +18,7 @@ class SharedViewModel : ViewModel() {
     val weight: LiveData<Float> = _weight
 
     private val _weightUnit: MutableLiveData<WeightUnit> = MutableLiveData(WeightUnit.KG)
+    val weightUnit: LiveData<WeightUnit> = _weightUnit
 
     val idealWeight = MediatorLiveData<String>()
     val correctWeight = MediatorLiveData<String>()
