@@ -3,8 +3,17 @@ package com.anddev404.calculatorbmi.binding_adapters
 import android.widget.Button
 import androidx.databinding.BindingAdapter
 import com.anddev404.calculatorbmi.R
+import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 
+@BindingAdapter("heightUnit")
+fun Button.setTextByHeightUnit(heightUnit: HeightUnit) {
+    when (heightUnit) {
+        HeightUnit.CM -> this.text = resources.getString(R.string.cm)
+        HeightUnit.IN -> this.text = resources.getString(R.string.`in`)
+        HeightUnit.FT_IN -> this.text = resources.getString(R.string.ft_in)
+    }
+}
 
 @BindingAdapter("weightUnit")
 fun Button.setTextByWeightUnit(weightUnit: WeightUnit) {

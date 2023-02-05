@@ -65,6 +65,7 @@
                         android:layout_height="wrap_content"
                         android:drawableEnd="@drawable/icon_drop_down"
                         android:text="@string/cm"
+                        app:heightUnit="@{viewmodel.heightUnit}"
                         app:layout_constrainedWidth="true"
                         app:layout_constraintBottom_toBottomOf="@id/height_fragment"
                         app:layout_constraintEnd_toEndOf="parent"
