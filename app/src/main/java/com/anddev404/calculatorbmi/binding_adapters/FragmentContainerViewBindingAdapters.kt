@@ -5,9 +5,7 @@ import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentManager
 import com.anddev404.calculatorbmi.R
 import com.anddev404.calculatorbmi.data.model.HeightUnit
-import com.anddev404.calculatorbmi.fragments.CmFragment
-import com.anddev404.calculatorbmi.fragments.FtInFragment
-import com.anddev404.calculatorbmi.fragments.InFragment
+import com.anddev404.calculatorbmi.fragments.*
 
 @BindingAdapter("heightFragment", "fragmentManager")
 fun FragmentContainerView.showFragmentByHeightUnit(
