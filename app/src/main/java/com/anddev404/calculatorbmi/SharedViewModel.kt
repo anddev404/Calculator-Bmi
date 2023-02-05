@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.anddev404.calculatorbmi.tools.CalculatorTools
 import com.anddev404.calculatorbmi.tools.UnitConverter
@@ -16,6 +17,9 @@ class SharedViewModel : ViewModel() {
 
     private val _weight: MutableLiveData<Float> = MutableLiveData(80f)//TODO delete temporary value
     val weight: LiveData<Float> = _weight
+
+    private val _heightUnit: MutableLiveData<HeightUnit> = MutableLiveData(HeightUnit.CM)
+    val heightUnit: LiveData<HeightUnit> = _heightUnit
 
     private val _weightUnit: MutableLiveData<WeightUnit> = MutableLiveData(WeightUnit.KG)
     val weightUnit: LiveData<WeightUnit> = _weightUnit
@@ -143,6 +147,10 @@ class SharedViewModel : ViewModel() {
         if (_weight.value != weight) {
             _weight.postValue(weight)
         }
+    }
+
+    fun changeHeightUnit(unit: HeightUnit) {
+        _heightUnit.postValue(unit)
     }
 
     fun changeWeightUnit(unit: WeightUnit) {
