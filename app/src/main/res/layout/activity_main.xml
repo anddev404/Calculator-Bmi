@@ -106,7 +106,8 @@
                         app:layout_constraintBottom_toBottomOf="@id/weight_fragment"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/weight_fragment"
-                        app:layout_constraintTop_toTopOf="@id/weight_fragment" />
+                        app:layout_constraintTop_toTopOf="@id/weight_fragment"
+                        app:weightUnit="@{viewmodel.weightUnit}" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
