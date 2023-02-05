@@ -8,6 +8,10 @@
         <variable
             name="viewmodel"
             type="com.anddev404.calculatorbmi.SharedViewModel" />
+
+        <variable
+            name="supportFragmentManager"
+            type="androidx.fragment.app.FragmentManager" />
     </data>
 
     <ScrollView
