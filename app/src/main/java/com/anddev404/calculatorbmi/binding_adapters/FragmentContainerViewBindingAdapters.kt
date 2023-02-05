@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentContainerView
 import androidx.fragment.app.FragmentManager
 import com.anddev404.calculatorbmi.R
 import com.anddev404.calculatorbmi.data.model.HeightUnit
+import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.anddev404.calculatorbmi.fragments.*
 
 @BindingAdapter("heightFragment", "fragmentManager")
@@ -22,5 +23,23 @@ fun FragmentContainerView.showFragmentByHeightUnit(
 
         HeightUnit.FT_IN -> fragmentManager.beginTransaction()
             .replace(R.id.height_fragment, FtInFragment()).commit()
+    }
+}
+
+@BindingAdapter("weightFragment", "fragmentManager")
+fun FragmentContainerView.showFragmentByWeightUnit(
+    weightUnit: WeightUnit,
+    fragmentManager: FragmentManager
+) {
+    when (weightUnit) {
+
+        WeightUnit.KG -> fragmentManager.beginTransaction()
+            .replace(R.id.weight_fragment, KgFragment()).commit()
+
+        WeightUnit.LB -> fragmentManager.beginTransaction()
+            .replace(R.id.weight_fragment, LbFragment()).commit()
+
+        WeightUnit.ST_LB -> fragmentManager.beginTransaction()
+            .replace(R.id.weight_fragment, StLbFragment()).commit()
     }
 }
