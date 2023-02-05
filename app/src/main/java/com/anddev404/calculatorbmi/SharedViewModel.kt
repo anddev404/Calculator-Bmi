@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.anddev404.calculatorbmi.tools.CalculatorTools
 import com.anddev404.calculatorbmi.tools.UnitConverter
+import kotlin.math.absoluteValue
 
 class SharedViewModel : ViewModel() {
 
@@ -20,6 +21,7 @@ class SharedViewModel : ViewModel() {
 
     val idealWeight = MediatorLiveData<String>()
     val correctWeight = MediatorLiveData<String>()
+    val underOverWeight = MediatorLiveData<Pair<Float, String>>()
 
     val bmi = MediatorLiveData<Float>()
 
@@ -87,6 +89,44 @@ class SharedViewModel : ViewModel() {
                 _weightUnit.value?.let { weightUnit ->
                     value = getCorrectWeight(height, weightUnit)
                 }
+            }
+        }
+
+        underOverWeight.apply {
+
+            fun getUnderOverWeight(): Pair<Float, String> {
+
+                _weight.value?.let { weight ->
+                    _height.value?.let { height ->
+                        _weightUnit.value?.let { weightUnit ->
+
+                            val underOverWeightKg =
+                                CalculatorTools.calculateUndeOverWeight(height, weight)
+
+                            if (underOverWeightKg != 0f) {
+                                var underOverWeightString =
+                                    UnitConverter.convertWeight(
+                                        underOverWeightKg.absoluteValue,
+                                        weightUnit
+                                    )
+                                return Pair(underOverWeightKg, underOverWeightString)
+                            }
+                        }
+                    }
+                }
+                return Pair(0f, "...")
+            }
+
+            addSource(_weight) {
+                value = getUnderOverWeight()
+            }
+
+            addSource(_height) {
+                value = getUnderOverWeight()
+            }
+
+            addSource(_weightUnit) {
+                value = getUnderOverWeight()
             }
         }
     }
