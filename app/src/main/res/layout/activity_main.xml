@@ -161,7 +161,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/default_margin"
                     app:correctWeight="@{viewmodel.correctWeight}"
-                    app:idealWeight="@{viewmodel.idealWeight}" />
+                    app:idealWeight="@{viewmodel.idealWeight}"
+                    app:underWeightOrOverWeightLeft="@{viewmodel.underOverWeight.first}"
+                    app:underWeightOrOverWeightRight="@{viewmodel.underOverWeight.second}" />
+
 
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
