@@ -14,8 +14,12 @@
             type="String" />
 
         <variable
-            name="underWeightOrOverWeight"
+            name="underWeightOrOverWeightRight"
             type="String" />
+
+        <variable
+            name="underWeightOrOverWeightLeft"
+            type="Float" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -103,7 +107,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:text="@string/under_over_weight"
+                android:text="@{underWeightOrOverWeightLeft > 0 ? @string/overweight : (underWeightOrOverWeightLeft == 0 ? @string/under_over_weight : @string/underweight), default = @string/under_over_weight}"
                 android:textSize="@dimen/text_size_normal" />
 
             <TextView
@@ -112,7 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:gravity="end|center_vertical"
-                android:text="@{underWeightOrOverWeight, default = `@string/three_dots`}"
+                android:text="@{underWeightOrOverWeightRight, default = `@string/three_dots`}"
                 android:textSize="@dimen/text_size_normal"
                 tools:text="10kg" />
         </LinearLayout>
