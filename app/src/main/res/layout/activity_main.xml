@@ -57,6 +57,8 @@
                         android:name="com.anddev404.calculatorbmi.fragments.CmFragment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:fragmentManager="@{supportFragmentManager}"
+                        app:heightFragment="@{viewmodel.heightUnit}"
                         app:layout_constraintBottom_toBottomOf="@id/height_textview"
                         app:layout_constraintEnd_toStartOf="@+id/change_height_unit_button"
                         app:layout_constraintStart_toEndOf="@+id/height_textview"
