@@ -97,10 +97,12 @@
                         android:name="com.anddev404.calculatorbmi.fragments.KgFragment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:fragmentManager="@{supportFragmentManager}"
                         app:layout_constraintBottom_toBottomOf="@id/weight_textview"
                         app:layout_constraintEnd_toStartOf="@+id/change_weight_unit_button"
                         app:layout_constraintStart_toEndOf="@+id/weight_textview"
                         app:layout_constraintTop_toTopOf="@id/weight_textview"
+                        app:weightFragment="@{viewmodel.weightUnit}"
                         tools:layout="@layout/fragment_kg" />
 
                     <Button
