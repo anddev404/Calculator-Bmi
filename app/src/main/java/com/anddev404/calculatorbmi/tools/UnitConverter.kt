@@ -15,10 +15,10 @@ class UnitConverter {
             return when (unit) {
                 WeightUnit.KG -> "${kg.roundToOneDecimal()} kg"
                 WeightUnit.LB -> "${
-                    kgToLb(kg).roundToInt()
+                    kgToLb(kg)
                 } lb"
                 WeightUnit.ST_LB -> "${kgToStone(kg)} st ${
-                    kgToLb(restFromKgToStone(kg)).roundToInt()
+                    kgToLb(restFromKgToStone(kg))
                 } lb"
             }
         }
@@ -27,16 +27,16 @@ class UnitConverter {
             return (kg * 0.1575f).toInt()
         }
 
-        fun stoneToKg(stones: Int): Float {
-            return stones * 6.35029318f
-        }
-
         fun restFromKgToStone(kg: Float): Float {
             return kg % 6.35029318f
         }
 
-        fun kgToLb(kg: Float): Float {
-            return kg * 2.20462262f
+        fun kgToLb(kg: Float): Int {
+            return (kg * 2.20462262f).roundToInt()
+        }
+
+        fun stoneToKg(stones: Int): Float {
+            return stones * 6.35029318f
         }
 
         fun lbToKg(lb: Int): Float {
@@ -54,10 +54,10 @@ class UnitConverter {
             return when (unit) {
                 HeightUnit.CM -> "${cm.roundToOneDecimal()} cm"
                 HeightUnit.IN -> "${
-                    cmToInches(cm).roundToInt()
+                    cmToInches(cm)
                 } in"
                 HeightUnit.FT_IN -> "${cmToFeet(cm)} ft ${
-                    cmToInches(restFromCmToFeet(cm)).roundToInt()
+                    cmToInches(restFromCmToFeet(cm))
                 } in"
             }
         }
@@ -66,16 +66,16 @@ class UnitConverter {
             return (cm * 0.032808399).toInt()
         }
 
-        fun feetToCm(feet: Int): Float {
-            return feet * 30.48f
-        }
-
         fun restFromCmToFeet(cm: Float): Float {
             return cm % 30.48f
         }
 
-        fun cmToInches(cm: Float): Float {
-            return cm * 0.3937007874f
+        fun cmToInches(cm: Float): Int {
+            return (cm * 0.3937007874f).roundToInt()
+        }
+
+        fun feetToCm(feet: Int): Float {
+            return feet * 30.48f
         }
 
         fun inchesToCm(inches: Int): Float {
