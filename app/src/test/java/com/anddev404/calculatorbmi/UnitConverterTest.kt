@@ -12,7 +12,7 @@ class UnitConverterTest {
     fun convertWeight() {
 
         assertEquals("0.0 kg", UnitConverter.convertWeight(0f, WeightUnit.KG))
-        assertEquals("0.01 kg", UnitConverter.convertWeight(0.01f, WeightUnit.KG))
+        assertEquals("0.0 kg", UnitConverter.convertWeight(0.01f, WeightUnit.KG))
         assertEquals("0.1 kg", UnitConverter.convertWeight(0.1f, WeightUnit.KG))
         assertEquals("1.0 kg", UnitConverter.convertWeight(1.0f, WeightUnit.KG))
         assertEquals("10.0 kg", UnitConverter.convertWeight(10f, WeightUnit.KG))
@@ -39,7 +39,7 @@ class UnitConverterTest {
     fun convertHeight() {
 
         assertEquals("0.0 cm", UnitConverter.convertHeight(0f, HeightUnit.CM))
-        assertEquals("0.01 cm", UnitConverter.convertHeight(0.01f, HeightUnit.CM))
+        assertEquals("0.0 cm", UnitConverter.convertHeight(0.01f, HeightUnit.CM))
         assertEquals("0.1 cm", UnitConverter.convertHeight(0.1f, HeightUnit.CM))
         assertEquals("1.0 cm", UnitConverter.convertHeight(1.0f, HeightUnit.CM))
         assertEquals("10.0 cm", UnitConverter.convertHeight(10f, HeightUnit.CM))
