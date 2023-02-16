@@ -48,6 +48,15 @@ fun EditText.setHeightOnlyInInches(heightInCm: Float) {
 
 }
 
+@BindingAdapter("weight_kg")
+fun EditText.setWeightInKg(weightInKg: Float) {
+
+    val previousKg = this.text.toString().toFloatOrZero()
+    if (previousKg == weightInKg) return
+
+    this.setText("$weightInKg")
+}
+
 @BindingAdapter("weight_st")
 fun EditText.setWeightInSt(weightInKg: Float) {
 
