@@ -4,8 +4,8 @@ class FloatExtension {
 
     companion object {
 
-        fun Float.roundToInt(): Int {
-            return String.format("%.0f", this).toInt()
+        fun Float.roundToIntWithDelta(): Int {
+            return (this + 0.1).toInt()
         }
 
         fun Float.roundToOneDecimal(): Float {

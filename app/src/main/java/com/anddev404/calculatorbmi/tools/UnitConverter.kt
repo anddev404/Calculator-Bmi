@@ -2,7 +2,7 @@ package com.anddev404.calculatorbmi.tools
 
 import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
-import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToInt
+import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToIntWithDelta
 import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToOneDecimal
 
 class UnitConverter {
@@ -24,7 +24,7 @@ class UnitConverter {
         }
 
         fun kgToStone(kg: Float): Int {
-            return (kg * 0.1575f).toInt()
+            return (kg * 0.1575f).roundToIntWithDelta()
         }
 
         fun restFromKgToStone(kg: Float): Float {
@@ -32,7 +32,7 @@ class UnitConverter {
         }
 
         fun kgToLb(kg: Float): Int {
-            return (kg * 2.20462262f).roundToInt()
+            return (kg * 2.20462262f).roundToIntWithDelta()
         }
 
         fun stoneToKg(stones: Int): Float {
@@ -63,7 +63,7 @@ class UnitConverter {
         }
 
         fun cmToFeet(cm: Float): Int {
-            return (cm * 0.032808399).toInt()
+            return (cm * 0.032808399f).roundToIntWithDelta()
         }
 
         fun restFromCmToFeet(cm: Float): Float {
@@ -71,7 +71,7 @@ class UnitConverter {
         }
 
         fun cmToInches(cm: Float): Int {
-            return (cm * 0.3937007874f).roundToInt()
+            return (cm * 0.3937007874f).roundToIntWithDelta()
         }
 
         fun feetToCm(feet: Int): Float {
