@@ -47,3 +47,14 @@ fun EditText.setHeightOnlyInInches(heightInCm: Float) {
     this.setText("$actualInches")
 
 }
+
+@BindingAdapter("weight_only_lb")
+fun EditText.setWeightOnlyInLb(weightInKg: Float) {
+
+    val previousLbs = this.text.toString().toIntOrZero()
+    val actualLbs = (UnitConverter.kgToLb(weightInKg))
+
+    if (previousLbs == actualLbs) return
+    this.setText("$actualLbs")
+
+}
