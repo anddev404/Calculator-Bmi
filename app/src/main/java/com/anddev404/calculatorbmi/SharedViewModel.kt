@@ -12,7 +12,7 @@ import kotlin.math.absoluteValue
 
 class SharedViewModel : ViewModel() {
 
-    private val _height: MutableLiveData<Float> = MutableLiveData(180f)//TODO delete temporary value
+    private val _height: MutableLiveData<Float> = MutableLiveData()
     val height: LiveData<Float> = _height
 
     private val _weight: MutableLiveData<Float> = MutableLiveData(80f)//TODO delete temporary value
@@ -139,13 +139,13 @@ class SharedViewModel : ViewModel() {
     //region methods
     fun changeHeight(height: Float) {
         if (_height.value != height) {
-            _height.postValue(height)
+            _height.value = height
         }
     }
 
     fun changeWeight(weight: Float) {
         if (_weight.value != weight) {
-            _weight.postValue(weight)
+            _weight.value = weight
         }
     }
 
