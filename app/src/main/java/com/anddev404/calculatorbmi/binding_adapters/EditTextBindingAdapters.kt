@@ -48,6 +48,28 @@ fun EditText.setHeightOnlyInInches(heightInCm: Float) {
 
 }
 
+@BindingAdapter("weight_st")
+fun EditText.setWeightInSt(weightInKg: Float) {
+
+    val previousStones = this.text.toString().toIntOrZero()
+    val actualStones = (UnitConverter.kgToLb(weightInKg)) / 14
+
+    if (previousStones == actualStones) return
+    this.setText("$actualStones")
+
+}
+
+@BindingAdapter("weight_lb")
+fun EditText.setWeightInLbs(weightInKg: Float) {
+
+    val previousLbs = this.text.toString().toIntOrZero()
+    val actualLbs = (UnitConverter.kgToLb(weightInKg)) % 14
+
+    if (previousLbs == actualLbs) return
+    this.setText("$actualLbs")
+
+}
+
 @BindingAdapter("weight_only_lb")
 fun EditText.setWeightOnlyInLb(weightInKg: Float) {
 
