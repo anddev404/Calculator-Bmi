@@ -15,7 +15,7 @@ class SharedViewModel : ViewModel() {
     private val _height: MutableLiveData<Float> = MutableLiveData()
     val height: LiveData<Float> = _height
 
-    private val _weight: MutableLiveData<Float> = MutableLiveData(80f)//TODO delete temporary value
+    private val _weight: MutableLiveData<Float> = MutableLiveData()
     val weight: LiveData<Float> = _weight
 
     private val _heightUnit: MutableLiveData<HeightUnit> = MutableLiveData(HeightUnit.CM)
