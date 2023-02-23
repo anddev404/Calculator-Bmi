@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kalkulator Bmi</string>
+
+    <string name="height">Wzrost</string>
+    <string name="weight">Waga</string>
+
+    <string name="underweight">Niedowaga</string>
+    <string name="normal_weight">Waga Normalna</string>
+    <string name="overweight">Nadwaga</string>
+    <string name="obese1">Otyłość I Stopnia</string>
+    <string name="obese2">Otyłość II Stopnia</string>
+
+    <string name="ideal_weight">Waga Idealna</string>
+    <string name="correct_weight">Waga Prawidłowa</string>
+    <string name="under_over_weight">Niedowaga/Nadwaga</string>
+</resources>
