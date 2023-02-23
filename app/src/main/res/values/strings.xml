@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalculatorBmi</string>
+    <string name="app_name">Calculator Bmi</string>
 
     <string name="height">Height</string>
     <string name="weight">Weight</string>
@@ -20,16 +20,16 @@
     <string name="correct_weight">Correct Weight</string>
     <string name="under_over_weight">Underweight/Overweight</string>
 
-    <string name="cm">cm</string>
-    <string name="in">in</string>
-    <string name="ft">ft</string>
-    <string name="ft_in">ft+in</string>
+    <string name="cm" translatable="false">cm</string>
+    <string name="in" translatable="false">in</string>
+    <string name="ft" translatable="false">ft</string>
+    <string name="ft_in" translatable="false">ft+in</string>
 
-    <string name="kg">kg</string>
-    <string name="lb">lb</string>
-    <string name="st">st</string>
-    <string name="st_lb">st+lb</string>
+    <string name="kg" translatable="false">kg</string>
+    <string name="lb" translatable="false">lb</string>
+    <string name="st" translatable="false">st</string>
+    <string name="st_lb" translatable="false">st+lb</string>
 
-    <string name="three_dots">...</string>
+    <string name="three_dots" translatable="false">...</string>
 
 </resources>
