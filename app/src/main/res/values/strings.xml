@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Calculator Bmi</string>
 
-    <string name="weight">Weight</string>
     <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
 
     <string name="underweight">Underweight</string>
     <string name="normal_weight">Normal Weight</string>
