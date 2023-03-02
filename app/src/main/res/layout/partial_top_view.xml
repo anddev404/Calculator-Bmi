@@ -22,10 +22,10 @@
             android:id="@+id/height_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/default_margin"
             android:text="@string/height"
             android:textSize="@dimen/text_size_big"
             app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/height_fragment"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,18 +33,20 @@
             android:id="@+id/height_fragment"
             android:name="com.anddev404.calculatorbmi.fragments.CmFragment"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:fragmentManager="@{supportFragmentManager}"
             app:heightFragment="@{viewmodel.heightUnit}"
+            app:layout_constraintBottom_toTopOf="@+id/weight_textview"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/change_height_unit_button"
-            app:layout_constraintTop_toBottomOf="@id/height_textview"
+            app:layout_constraintTop_toBottomOf="@+id/height_textview"
             tools:layout="@layout/fragment_cm" />
 
         <Button
             android:id="@+id/change_height_unit_button"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:drawableEnd="@drawable/icon_drop_down"
             android:text="@string/cm"
             app:heightUnit="@{viewmodel.heightUnit}"
@@ -61,25 +63,28 @@
             android:layout_marginTop="@dimen/small_margin"
             android:text="@string/weight"
             android:textSize="@dimen/text_size_big"
+            app:layout_constraintBottom_toTopOf="@+id/weight_fragment"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/height_fragment" />
+            app:layout_constraintTop_toBottomOf="@+id/height_fragment" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/weight_fragment"
             android:name="com.anddev404.calculatorbmi.fragments.KgFragment"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:fragmentManager="@{supportFragmentManager}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/change_weight_unit_button"
-            app:layout_constraintTop_toBottomOf="@id/weight_textview"
+            app:layout_constraintTop_toBottomOf="@+id/weight_textview"
             app:weightFragment="@{viewmodel.weightUnit}"
             tools:layout="@layout/fragment_kg" />
 
         <Button
             android:id="@+id/change_weight_unit_button"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:drawableEnd="@drawable/icon_drop_down"
             android:text="@string/kg"
             app:layout_constraintBottom_toBottomOf="@id/weight_fragment"
