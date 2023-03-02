@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Kalkulator Bmi</string>
 
-    <string name="height">Wzrost</string>
     <string name="weight">Waga</string>
+    <string name="height">Wzrost:</string>
 
     <string name="underweight">Niedowaga</string>
     <string name="normal_weight">Waga Normalna</string>
