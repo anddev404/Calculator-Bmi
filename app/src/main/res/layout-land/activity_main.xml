@@ -21,7 +21,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/background">
+            android:background="@color/background"
+            android:paddingLeft="@dimen/small_margin"
+            android:paddingRight="@dimen/small_margin">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_center_vertical"
