@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun addMenuButtonsClickListener() {
 
-        binding.changeHeightUnitButton.setOnClickListener {
+        binding.topView.changeHeightUnitButton.setOnClickListener {
             val popup = PopupMenu(this, it)
             popup.menuInflater.inflate(R.menu.height_popup_menu, popup.menu)
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             popup.show()
         }
 
-        binding.changeWeightUnitButton.setOnClickListener {
+        binding.topView.changeWeightUnitButton.setOnClickListener {
             val popup = PopupMenu(this, it)
             popup.menuInflater.inflate(R.menu.weight_popup_menu, popup.menu)
 
