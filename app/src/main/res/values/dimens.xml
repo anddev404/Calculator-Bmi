@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_size_normal">18sp</dimen>
-    <dimen name="text_size_big">22sp</dimen>
-    <dimen name="text_size_very_big">38sp</dimen>
+    <dimen name="text_size_normal">17sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_very_big">34sp</dimen>
 
-    <dimen name="square_size">25dp</dimen>
-    <dimen name="default_margin">20dp</dimen>
-    <dimen name="small_margin">10dp</dimen>
+    <dimen name="square_size">23dp</dimen>
+    <dimen name="default_margin">18dp</dimen>
+    <dimen name="small_margin">9dp</dimen>
 
-    <dimen name="pointer_height">40dp</dimen>
+    <dimen name="pointer_height">36dp</dimen>
 
     <dimen name="cardview_corner_radius">8dp</dimen>
 
