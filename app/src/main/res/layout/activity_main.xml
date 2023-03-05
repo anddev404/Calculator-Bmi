@@ -30,7 +30,7 @@
                 android:layout_margin="@dimen/small_margin"
                 app:cardCornerRadius="@dimen/cardview_corner_radius"
                 app:layout_constraintBottom_toTopOf="@+id/middle_card_view"
-                app:layout_constraintHeight_min="wrap"
+                app:layout_constraintHeight_default="wrap"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <include
