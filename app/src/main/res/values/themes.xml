@@ -17,5 +17,6 @@
         <item name="backgroundTint">@color/edit_text_color</item>
         <item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>
 
+        <item name="android:imeOptions">flagNoExtractUi</item>
     </style>
 </resources>
