@@ -9,6 +9,10 @@ import android.widget.TextView
 import com.anddev404.calculatorbmi.R
 import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToTwoDecimal
 
+/**
+ *[R.layout.custom_view_bmi_bar_view]
+ * Custom view wyświetlający BMI w formie tekstowej oraz graficznej za pomocą seekBar-a.
+ */
 class BmiBarView(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
     private var seekBar: SeekBar

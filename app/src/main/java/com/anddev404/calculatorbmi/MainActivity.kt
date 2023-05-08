@@ -11,6 +11,17 @@ import com.anddev404.calculatorbmi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+    Główna aktywność projektu, wykorzystująca shared ViewModel oraz data binding.
+    Ta aktywność zawiera także setOnClickListeners menu przycisków, umożliwiających zmianę jednostki miary - wagi lub wzrostu, co skutkuje
+    zmianą fragmentów we FragmentContainerView.
+
+    Layout tej aktywności składa się z trzech CardView-ów.
+    Pierwszy służy do wprowadzania danych od użytkownika,
+    drugi zawiera wynik - czyli BMI,
+    trzecii podaje informacje dotyczące wagi użytkownika, tj. wagę idealną, przedział wagi prawidłowej oraz nadwagę lub niedowagę.
+     */
+
     private lateinit var viewmodel: SharedViewModel
     private lateinit var binding: ActivityMainBinding
 

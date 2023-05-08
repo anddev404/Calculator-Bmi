@@ -8,6 +8,13 @@ import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.anddev404.calculatorbmi.fragments.*
 
+/**
+ * Poniższe metody showFragmentByHeightUnit oraz showFragmentByWeightUnit
+ * są odpowiedzialne za wyświetlanie odpowiednich fragmentów związanych z jednostką wagi i wzrostu.
+ * Wymagają FragmentManagera przesłanego z aktywności, która korzysta z FragmentContainerView,
+ * w celu przypisania fragmentu do kontenera.
+ */
+
 @BindingAdapter("heightFragment", "fragmentManager")
 fun FragmentContainerView.showFragmentByHeightUnit(
     heightUnit: HeightUnit,

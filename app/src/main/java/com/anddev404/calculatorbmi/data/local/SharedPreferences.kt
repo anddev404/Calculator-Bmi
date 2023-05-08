@@ -6,6 +6,9 @@ import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 import com.pixplicity.easyprefs.library.Prefs
 
+/**
+ * Implementacja interfejsu LocalDataSource, który zapamiętuje wybrane dane użytkownika.
+ */
 class SharedPreferences(context: Context) : LocalDataSource {
 
     init {

@@ -6,6 +6,10 @@ import com.anddev404.calculatorbmi.R
 import com.anddev404.calculatorbmi.data.model.HeightUnit
 import com.anddev404.calculatorbmi.data.model.WeightUnit
 
+/**
+ * Metody setTextByHeightUnit oraz setTextByWeightUnit po zmianie jednostki wagi lub wzrostu
+ * wyświetlają odpowiedni tekst (jednostkę wagi/wzrostu) na przycisku, z którego zostały wybrane.
+ */
 @BindingAdapter("heightUnit")
 fun Button.setTextByHeightUnit(heightUnit: HeightUnit) {
     when (heightUnit) {

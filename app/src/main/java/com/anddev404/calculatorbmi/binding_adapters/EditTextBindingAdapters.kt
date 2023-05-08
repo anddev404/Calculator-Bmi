@@ -6,6 +6,14 @@ import com.anddev404.calculatorbmi.extensions.toFloatOrZero
 import com.anddev404.calculatorbmi.extensions.toIntOrZero
 import com.anddev404.calculatorbmi.tools.UnitConverter
 
+/**
+ * Do obliczenia BMI wymagane jest podanie wzrostu w [cm] oraz wagi w [kg].
+ * Dlatego ViewModel korzysta z tych jednostek, a w przypadku użycia innych jednostek,
+ * takich jak funt, cale, stone, lb itp., wymagana jest ich konwersja.
+ * Poniższe metody konwertują wartości wzrostu i wagi z jednostek innych niż cm i kg na odpowiadające im wartości.
+ * W celu uniknięcia pętli w aplikacji podczas wysyłania danych do EditText-ów
+ * z użyciem addTextChangedListener i TextWatcher-a, wartości te są porównywane przed przekazaniem ich do EditText-ów.
+ */
 @BindingAdapter("height_cm")
 fun EditText.setHeightInCm(heightInCm: Float) {
 

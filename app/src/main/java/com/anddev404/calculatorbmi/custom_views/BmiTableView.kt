@@ -7,6 +7,11 @@ import android.view.View
 import android.widget.LinearLayout
 import com.anddev404.calculatorbmi.R
 
+/**
+ * [R.layout.custom_view_bmi_table_view]
+ * Custom view wyświetlający przedział, w którym znajduje się BMI użytkownika.
+ * Dostępne przedziały to: niedowaga, waga normalna, nadwaga, otyłość 1. stopnia oraz otyłość 2. stopnia.
+ */
 class BmiTableView(context: Context?, attrs: AttributeSet?) : LinearLayout(context, attrs) {
 
     private lateinit var underWeightView: View
