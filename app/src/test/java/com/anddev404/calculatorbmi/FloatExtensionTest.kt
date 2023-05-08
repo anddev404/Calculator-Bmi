@@ -1,6 +1,6 @@
 package com.anddev404.calculatorbmi
 
-import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToInt
+import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToIntWithDelta
 import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToOneDecimal
 import com.anddev404.calculatorbmi.extensions.FloatExtension.Companion.roundToTwoDecimal
 
@@ -10,31 +10,31 @@ import org.junit.Test
 class FloatExtensionTest {
 
     @Test
-    fun roundToInt() {
+    fun roundToIntWithDelta() {
 
-        Assert.assertEquals(0, 0f.roundToInt())
+        Assert.assertEquals(0, 0f.roundToIntWithDelta())
 
-        Assert.assertEquals(0, 0.0f.roundToInt())
-        Assert.assertEquals(0, 0.00f.roundToInt())
-        Assert.assertEquals(0, 0.000f.roundToInt())
+        Assert.assertEquals(0, 0.0f.roundToIntWithDelta())
+        Assert.assertEquals(0, 0.00f.roundToIntWithDelta())
+        Assert.assertEquals(0, 0.000f.roundToIntWithDelta())
 
-        Assert.assertEquals(0, 0.1f.roundToInt())
-        Assert.assertEquals(0, 0.11f.roundToInt())
-        Assert.assertEquals(0, 0.111f.roundToInt())
+        Assert.assertEquals(0, 0.1f.roundToIntWithDelta())
+        Assert.assertEquals(0, 0.11f.roundToIntWithDelta())
+        Assert.assertEquals(0, 0.111f.roundToIntWithDelta())
 
-        Assert.assertEquals(1, 1.1f.roundToInt())
-        Assert.assertEquals(1, 1.11f.roundToInt())
-        Assert.assertEquals(1, 1.111f.roundToInt())
+        Assert.assertEquals(1, 1.1f.roundToIntWithDelta())
+        Assert.assertEquals(1, 1.11f.roundToIntWithDelta())
+        Assert.assertEquals(1, 1.111f.roundToIntWithDelta())
 
-        Assert.assertEquals(1, 0.5f.roundToInt())
-        Assert.assertEquals(1, 0.55f.roundToInt())
-        Assert.assertEquals(0, 0.055f.roundToInt())
+        Assert.assertEquals(1, 0.5f.roundToIntWithDelta())
+        Assert.assertEquals(1, 0.55f.roundToIntWithDelta())
+        Assert.assertEquals(0, 0.055f.roundToIntWithDelta())
 
-        Assert.assertEquals(2, 1.5f.roundToInt())
-        Assert.assertEquals(1, 1.15f.roundToInt())
+        Assert.assertEquals(2, 1.5f.roundToIntWithDelta())
+        Assert.assertEquals(1, 1.15f.roundToIntWithDelta())
 
-        Assert.assertEquals(12, 11.6f.roundToInt())
-        Assert.assertEquals(11, 11.15f.roundToInt())
+        Assert.assertEquals(12, 11.6f.roundToIntWithDelta())
+        Assert.assertEquals(11, 11.15f.roundToIntWithDelta())
 
     }
 
