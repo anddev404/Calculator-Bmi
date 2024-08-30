@@ -1,5 +1,5 @@
 # **Opis**
-<a href="https://play.google.com/store/apps/developer?id=anddev404"><img width="150" align="right" style="margin:0px 0px 0px 0px" src="https://github.com/anddev404/Kalkulator-Bmi/blob/master/images/icon_png.png?raw=true)](https://play.google.com/store/apps/developer?id=anddev404"></a>
+<a href="https://play.google.com/store/apps/developer?id=anddev404"><img width="150" align="right" style="margin:0px 0px 0px 0px" src="[https://github.com/anddev404/Kalkulator-Bmi/blob/master/images/icon_png.png?raw=true](https://github.com/anddev404/Calculator-Bmi/blob/main/images/new_official_icon.png?raw=true))](https://play.google.com/store/apps/developer?id=anddev404"></a>
 
 Prosta i intuicyjna aplikacja napisana w języku Kotlin, umożliwiająca obliczenie wskaźnika masy ciała (BMI).
 
